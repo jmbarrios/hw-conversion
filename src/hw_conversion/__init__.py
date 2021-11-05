@@ -1,4 +1,3 @@
-from nbconvert.exporters.base import export
 import nbformat
 from traitlets.config import Config
 from nbconvert.exporters import PythonExporter
@@ -13,7 +12,7 @@ def convert_hw(pattern, hw_file):
         pattern to match keeping cells
     hw_file: str
         Homework jupyter notebook filename
-    ''' 
+    '''
     c = Config()
     c.HomeworkPreproccessor.pattern = pattern
     c.PythonExporter.preprocessors = [HomeworkPreproccessor]
